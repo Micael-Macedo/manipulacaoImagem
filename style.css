@@ -98,4 +98,14 @@ img {
 
 #photo-file {
   display: none;
+}
+
+#photo-preview {
+  margin: 0.8rem 0;
+}
+
+#selection-tool {
+  position: fixed;
+  display: none;
+  border: 2px dashed var(--green);
 }/*# sourceMappingURL=style.css.map */
