@@ -1,5 +1,6 @@
 const photoFile = document.getElementById("photo-file")
-let image = document.getElementById("photo-preview")
+let photoPreview = document.getElementById("photo-preview")
+let image = new Image();
 
 document.getElementById("select-image").onclick = function () {
     photoFile.click()
@@ -64,7 +65,20 @@ const events = {
 }
 
 Object.keys(events).forEach(eventName => {
-    image.addEventListener(eventName, events[eventName])
+    photoPreview.addEventListener(eventName, events[eventName])
 })
+
+let canvas = document.createElement("canvas")
+let ctx = canvas.getContext('2d');
+
+image.onload = function (){
+    const {width, height} = image
+    canvas.width = width
+    canvas.height = height
+
+    ctx.clearRect(0,0, width, height)
+    ctx.drawImage(image, 0 , 0)
+    photoPreview.src = canvas.toDataURL()
+}
 
 
