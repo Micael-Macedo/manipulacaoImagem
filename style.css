@@ -108,4 +108,8 @@ img {
   position: fixed;
   display: none;
   border: 2px dashed var(--green);
+}
+
+#crop-image {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
