@@ -110,6 +110,6 @@ img {
   border: 2px dashed var(--green);
 }
 
-#crop-image {
+#crop-image, #download {
   display: none;
 }/*# sourceMappingURL=style.css.map */
